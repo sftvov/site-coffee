@@ -13,7 +13,7 @@ body {
 	color: $colorText;
 	@include adaptiv-value('font-size', 18, 18, 14, $md1, $md2, px);
 	line-height: 1.4;
-	font-weight: 400;
+	font-weight: 500;
 	letter-spacing: 0em;
 	font-style: normal;
 }
