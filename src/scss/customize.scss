@@ -11,7 +11,10 @@ $colorTextLight: #c6c6c6;
 
 body {
 	color: $colorText;
-	@include adaptiv-value('font-size', 18, 18, 14, $md1, $md2, px);
+	@media (min-width: $md1+px) {
+		font-size: 25px;
+	}
+	font-size: 18px;
 	line-height: 1.4;
 	font-weight: 500;
 	letter-spacing: 0em;
@@ -45,7 +48,7 @@ body {
 	&__button {
 		@include common-value('margin-top', 8);
 		width: 238px;
-		@media (max-width: $md4+px) {
+		@media (max-width: $md3+px) {
 			width: 100%;
 		}
 	}
