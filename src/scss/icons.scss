@@ -1,11 +1,11 @@
-@font-face {
-	font-family: 'icons';
-	src: url('../fonts/icons.eot?5y6mn6');
-	src: url('../fonts/icons.eot?5y6mn6#iefix') format('embedded-opentype'), url('../fonts/icons.ttf?5y6mn6') format('truetype'), url('../fonts/icons.woff?5y6mn6') format('woff'), url('../fonts/icons.svg?5y6mn6#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-	font-display: block;
-}
+// @font-face {
+// 	font-family: 'icons';
+// 	src: url('../fonts/icons.eot?5y6mn6');
+// 	src: url('../fonts/icons.eot?5y6mn6#iefix') format('embedded-opentype'), url('../fonts/icons.ttf?5y6mn6') format('truetype'), url('../fonts/icons.woff?5y6mn6') format('woff'), url('../fonts/icons.svg?5y6mn6#icons') format('svg');
+// 	font-weight: normal;
+// 	font-style: normal;
+// 	font-display: block;
+// }
 
 [class*='_icon-']:before {
 	/* use !important to prevent issues with browser extensions that change fonts */
