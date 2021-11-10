@@ -2,23 +2,12 @@
 @import 'fonts';
 
 $fontFamily: 'Gilroy';
-$minWidth: 320;
+$minWidth: 375;
 $maxWidth: 1904;
 $maxWidthContainer: 1660;
 $md1: $maxWidthContainer + 39.95;
 $md2: 1219.95;
 $md3: 739.95;
-
-.background {
-	position: absolute;
-	top: calc(-100vw / 1904 * 276);
-	right: -38.55%;
-	max-width: 1444px;
-	width: calc(100vw / 1904 * 1444);
-	@media (min-width: $maxWidth+px) {
-		top: -276px;
-	}
-}
 
 @import 'null';
 @import 'customize';
@@ -35,6 +24,16 @@ $md3: 739.95;
 	align-items: center;
 	flex-direction: column;
 	&._loaded {
+	}
+	&__background {
+		position: absolute;
+		top: calc(-100vw / 1904 * 276);
+		right: -38.55%;
+		max-width: 1444px;
+		width: calc(100vw / 1904 * 1444);
+		@media (min-width: $maxWidth+px) {
+			top: -276px;
+		}
 	}
 }
 

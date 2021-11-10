@@ -2,92 +2,161 @@
 	z-index: 100;
 	position: fixed;
 	width: 100%;
-	// background-color: $colorLight;
+	transition: background-color 0.5s ease;
+	@media (min-width: $md2+px) {
+		&:hover {
+			background-color: $colorLight;
+		}
+	}
+	@media (max-width: $md2+px) {
+		background-color: $colorLight;
+	}
+
+	&__wrapper {
+	}
 
 	&__container {
 		width: 100%;
 	}
 
+	&__body {
+		display: flex;
+		align-items: center;
+		@media (min-width: $md1+px) {
+			min-height: 160px;
+		}
+		@media (min-width: $md2+px) {
+			min-height: 113px;
+		}
+		@media (min-width: $md3+px) {
+			min-height: 143px;
+		}
+		min-height: 70px;
+	}
+
+	&__logo-wrapper {
+		flex-grow: 1;
+		z-index: 1;
+	}
+
+	&__logo {
+		@media (min-width: $md1+px) {
+			width: 260px;
+		}
+		@media (min-width: $md2+px) {
+			width: 179px;
+		}
+		@media (min-width: $md3+px) {
+			width: 225px;
+		}
+		width: 110px;
+	}
+
 	&__burger {
 		cursor: pointer;
 		z-index: 1;
-		display: none;
+		display: flex;
 		flex-direction: column;
 		align-items: flex-start;
 		justify-content: space-between;
-		width: 20px;
-		height: 42px;
-		margin-left: 12px;
-		background-color: $colorLight;
-		border-radius: 50%;
+		width: 59px;
+		height: 30px;
+		margin-right: 89px;
+		@media (min-width: $md2+px) {
+			display: none;
+		}
+		@media (max-width: $md3+px) {
+			transform: scale(0.5) translate(-50%);
+			margin-right: -7.5px;
+		}
 		&::before,
 		&::after,
 		& span {
 			position: relative;
 			content: '';
-			width: 16px;
-			height: 2px;
-			background-color: $colorMain;
+			width: 59px;
+			height: 3px;
+			background-color: $colorText;
 			transition: all 0.4s;
 		}
 		&::before {
-			top: 12px;
+			top: 0;
 		}
 		&::after {
-			bottom: 12px;
+			bottom: 0;
 		}
 		& span {
 		}
 		&._active {
 			&::before {
-				top: 20px;
-				transform: rotate(45deg);
+				top: 18px;
+				transform: rotate(45deg) translate(-7px);
 			}
 			&::after {
-				bottom: 20px;
-				transform: rotate(-45deg);
+				bottom: 18px;
+				transform: rotate(-45deg) translate(-7px);
 			}
 			& span {
 				width: 0;
 			}
 		}
-		@media (max-width: $md3+px) {
-			display: flex;
-		}
 	}
 
 	&__menu {
-		transition: right 0.6s ease;
-		&._active {
-			right: 0;
-		}
-		@media (max-width: $md3 + px) {
+		flex-grow: 1;
+		transition: left 0.5s ease-out;
+		@media (max-width: $md2 + px) {
 			position: absolute;
+			top: 0;
 			background-color: $colorLight;
-			min-width: 75vw;
-			right: -100vw;
+			width: 100vw;
+			left: -100vw;
+		}
+		&._active {
+			left: 0;
 		}
 	}
 
 	&__menu-list {
 		display: flex;
-		justify-content: center;
-		padding: 15px 0;
-		column-gap: 20px;
-		& li {
-			& a {
-				color: $colorText;
-				&:hover,
-				&:active,
-				&._active {
-					color: $colorMainHover;
-				}
+		align-items: flex-start;
+		column-gap: 100px;
+		height: 100%;
+		& a {
+			color: $colorText;
+			&:hover,
+			&:active,
+			&._active {
+				color: $colorMainHover;
 			}
 		}
-		@media (max-width: $md3 + px) {
+		@media (max-width: $md2 + px) {
 			flex-direction: column;
 			& li {
-				padding: 10px 0 10px 15px;
+				padding: 10px 0;
+			}
+		}
+	}
+
+	&__activities {
+		z-index: 1;
+		display: flex;
+		align-items: center;
+		@media (min-width: $md1+px) {
+			column-gap: 53px;
+		}
+		@media (min-width: $md2+px) {
+			column-gap: 40px;
+		}
+		@media (min-width: $md3+px) {
+			column-gap: 60px;
+		}
+		column-gap: 30px;
+		& a {
+			font-size: (34/25) + em;
+			line-height: 1;
+			&:hover {
+				color: $colorMainHover;
 			}
 		}
 	}

@@ -1,8 +1,9 @@
-let body = document.querySelector('body');
+let wrapper = document.querySelector('.wrapper');
 let header = document.querySelector('.header');
+let page = document.querySelector('.page');
+let body = document.querySelector('body');
 let menu = document.querySelector('.header__menu');
 let burger = document.querySelector('.header__burger');
-let page = document.querySelector('.page');
 let forms = document.getElementsByTagName('form');
 let loading = document.querySelector('.loading');
 // ----------------------------------------------------------------------
@@ -12,6 +13,17 @@ function spaceForHeader() {
 	headerHeight = header.offsetHeight;
 	page.style.paddingTop = headerHeight + 'px';
 }	
+function spaceForMobileMenu() {
+	if (wrapper.offsetWidth < 1220) {
+		menu.style.paddingTop = headerHeight + 'px';
+		menu.firstElementChild.classList.add('_container');
+	}
+	else {
+		menu.style.paddingTop = '0px';
+		menu.firstElementChild.classList.remove('_container');
+	}
+
+}
 
 // ----------------------------------------------------------------------
 
@@ -32,12 +44,14 @@ function spaceForHeader() {
 
 window.onresize = () => {
 	spaceForHeader();
+	spaceForMobileMenu();
   addTouchClassForMobile();
   closeBurger();
 }
 
 window.onload = () => {	
 	spaceForHeader();
+	spaceForMobileMenu();
 }
 
 // ----------------------------------------------------------------------
