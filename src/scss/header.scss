@@ -122,19 +122,14 @@
 		align-items: flex-start;
 		column-gap: 100px;
 		height: 100%;
-		& a {
-			color: $colorText;
-			&:hover,
-			&:active,
-			&._active {
-				color: $colorMainHover;
-			}
-		}
 		@media (max-width: $md2 + px) {
 			flex-direction: column;
-			& li {
-				padding: 10px 0;
-			}
+		}
+	}
+
+	&__menu-item {
+		@media (max-width: $md2+px) {
+			padding: 10px 0;
 		}
 	}
 
@@ -152,12 +147,12 @@
 			column-gap: 60px;
 		}
 		column-gap: 30px;
-		& a {
+		& [class^='_icon-'] {
 			font-size: (34/25) + em;
 			line-height: 1;
-			&:hover {
-				color: $colorMainHover;
-			}
 		}
 	}
+}
+
+a {
 }
