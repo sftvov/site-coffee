@@ -192,3 +192,62 @@ let _slideToggle = (target, duration = 500) => {
 	}
 };
 //========================================
+
+let _slideSide = (target, duration = 500) => {
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide');
+		if (target.hidden) {
+			target.hidden = false;
+		}
+		let width = target.offsetWidth;
+		target.style.overflow = 'hidden';
+		target.style.width = 0;
+		target.style.paddingTop = 0;
+		target.style.paddingBottom = 0;
+		target.style.marginTop = 0;
+		target.style.marginBottom = 0;
+		target.offsetWidth;
+		target.style.transitionProperty = 'width, margin, padding';
+		target.style.transitionDuration = duration + 'ms';
+		target.style.width = width + 'px';
+		target.style.removeProperty('padding-top');
+		target.style.removeProperty('padding-bottom');
+		target.style.removeProperty('margin-top');
+		target.style.removeProperty('margin-bottom');
+		window.setTimeout(() => {
+			target.style.removeProperty('width');
+			target.style.removeProperty('overflow');
+			target.style.removeProperty('transition-duration');
+			target.style.removeProperty('transition-property');
+			target.classList.remove('_slide');
+		}, duration);
+	}
+};
+
+let _slideSideBack = (target, duration = 500) => {
+	if (!target.classList.contains('_slide')) {
+		target.classList.add('_slide');
+		target.style.transitionProperty = 'width, margin, padding';
+		target.style.transitionDuration = duration + 'ms';
+		target.style.width = target.offsetWidth + 'px';
+		target.offsetWidth;
+		target.style.overflow = 'hidden';
+		target.style.width = 0;
+		target.style.paddingTop = 0;
+		target.style.paddingBottom = 0;
+		target.style.marginTop = 0;
+		target.style.marginBottom = 0;
+		window.setTimeout(() => {
+			target.hidden = true;
+			target.style.removeProperty('width');
+			target.style.removeProperty('padding-top');
+			target.style.removeProperty('padding-bottom');
+			target.style.removeProperty('margin-top');
+			target.style.removeProperty('margin-bottom');
+			target.style.removeProperty('overflow');
+			target.style.removeProperty('transition-duration');
+			target.style.removeProperty('transition-property');
+			target.classList.remove('_slide');
+		}, duration);
+	}
+};
