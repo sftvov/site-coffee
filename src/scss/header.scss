@@ -181,30 +181,37 @@
 		width: 880px;
 	}
 	margin-right: 25px;
-	&._active {
-		@media (max-width: $md2+px) {
-			position: fixed;
-			top: 0;
-			left: 0;
-			width: 100vw;
-			height: 100vh;
-			padding-top: 40px;
-			background-color: $colorLight;
-		}
+	@media (max-width: $md2+px) {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		padding-top: 40px;
+		background-color: $colorLight;
 	}
 	&__body {
 		display: flex;
 		align-items: center;
-		width: 100%;
 		@media (min-width: $md1+px) {
 			min-height: 59px;
 		}
 		@media (min-width: $md2+px) {
 			min-height: 42px;
 		}
+		@media (min-width: $md3+px) {
+			min-height: 70px;
+		}
+		min-height: 30px;
 		padding-left: 30px;
 		border-radius: 30px;
-		box-shadow: 0px 0px 20px #{$colorTextLight + '40'};
+		transition: box-shadow 0.2s ease;
+		@media (max-width: $md2+px) {
+			margin: 0 20px;
+		}
+		&._focus {
+			box-shadow: 0px 0px 20px #{$colorTextLight + '40'};
+		}
 		&::before {
 			font-size: 31/25 + em;
 			color: $colorTextLight;

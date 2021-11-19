@@ -20,11 +20,9 @@ var isMobile = {
 };
 
 function addTouchClassForMobile() {
-	let body = document.querySelector('body');
 	if (isMobile.any()) {
 		body.classList.add('_touch');
 	} else {
 		body.classList.remove('_touch');
 	}
 }
-addTouchClassForMobile();
