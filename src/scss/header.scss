@@ -15,11 +15,7 @@
 		background-color: $colorLight;
 	}
 
-	&__wrapper {
-	}
-
 	&__container {
-		width: 100%;
 	}
 
 	&__body {
@@ -187,8 +183,11 @@
 		left: 0;
 		width: 100vw;
 		height: 100vh;
-		padding-top: 40px;
+		padding-top: 60px;
 		background-color: $colorLight;
+	}
+	@media (max-width: $md3+px) {
+		padding-top: 30px;
 	}
 	&__body {
 		display: flex;
