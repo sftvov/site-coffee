@@ -1,0 +1,28 @@
+.banner {
+	&__swiper {
+	}
+
+	&__container {
+	}
+
+	&__title {
+		font-size: 80/25 + px;
+		font-weight: 900;
+		line-height: calc(100 / 80);
+	}
+
+	&__text {
+		font-weight: 70;
+	}
+
+	&__button {
+	}
+
+	&__img {
+	}
+
+	& swiper-wrapper {
+	}
+	& swiper-slide {
+	}
+}
