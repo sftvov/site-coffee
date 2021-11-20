@@ -1,5 +1,62 @@
 .footer {
+	z-index: 1;
+	display: flex;
+	align-items: flex-end;
 	width: 100%;
-	color: $colorLight;
-	background-color: $colorMain;
+	@media (min-width: $md1+px) {
+		min-height: 315px;
+	}
+	@media (min-width: $md2+px) {
+		min-height: 250px;
+	}
+	@media (min-width: $md3+px) {
+		min-height: 311px;
+	}
+	min-height: 174px;
+	@media (min-width: $md1+px) {
+		padding-bottom: 100px;
+	}
+	@media (min-width: $md2+px) {
+		padding-bottom: 70px;
+	}
+	@media (min-width: $md3+px) {
+		padding-bottom: 80px;
+	}
+	padding-bottom: 50px;
+
+	&__container {
+		flex-grow: 1;
+	}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		@media (max-width: $md2+px) {
+			flex-direction: column;
+			row-gap: 50px;
+		}
+		@media (max-width: $md3+px) {
+			row-gap: 30px;
+		}
+	}
+
+	&__logo {
+		@media (max-width: $md2+px) {
+			order: 1;
+		}
+	}
+
+	&__menu-list {
+		display: flex;
+		@media (min-width: $md1+px) {
+			column-gap: 100px;
+		}
+		@media (min-width: $md2+px) {
+			column-gap: 66px;
+		}
+		@media (min-width: $md3+px) {
+			column-gap: 60px;
+		}
+		column-gap: 30px;
+	}
 }
