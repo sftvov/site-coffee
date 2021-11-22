@@ -23,7 +23,6 @@ function spaceForMobileMenu() {
 		menu.style.paddingTop = '0px';
 		menu.firstElementChild.classList.remove('_container');
 	}
-
 }
 
 

@@ -5,7 +5,7 @@ $colorMainHover: #e2a300;
 $colorLinkHover: #e2a300;
 $colorBright: #f9b300;
 $colorAlert: #ff3451;
-$colorText: #292929;
+$colorText: #000000;
 $colorTextGray: #5b5b5b;
 $colorTextLight: #c6c6c6;
 
@@ -21,10 +21,13 @@ body {
 		font-size: 32px;
 	}
 	font-size: 16px;
-	line-height: 1.4;
 	font-weight: 500;
 	letter-spacing: 0em;
 	font-style: normal;
+}
+
+._bold {
+	font-weight: 700;
 }
 
 // .form {
@@ -51,13 +54,25 @@ body {
 // 		min-height: 120px;
 // 		padding: 9px 5px;
 // 	}
-// 	&__button {
-// 		@include common-value('margin-top', 8);
-// 		width: 238px;
-// 		@media (max-width: $md3+px) {
-// 			width: 100%;
-// 		}
-// 	}
+
+._button {
+	font-size: 30/25 + em;
+	line-height: calc(36.27 / 30);
+	@media (min-width: $md1+px) {
+		height: 80px;
+		width: 400px;
+		border-radius: 5px;
+	}
+	@media (min-width: $md2+px) {
+		height: 56px;
+		width: 283px;
+		border-radius: 3.542541980743408px;
+	}
+	&--main {
+		color: $colorLight;
+		background-color: $colorMain;
+	}
+}
 
 // 	&__checkbox {
 // 		display: none;

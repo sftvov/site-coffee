@@ -1,24 +1,82 @@
 .banner {
+	width: 100%;
+	@media (min-width: $md1+px) {
+		margin-top: 32px;
+	}
+	@media (min-width: $md2+px) {
+		margin-top: 22.33px;
+	}
+	margin-top: 0;
 	&__swiper {
 	}
 
 	&__container {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		@media (min-width: $md1+px) {
+			height: 772.87px;
+		}
+		@media (min-width: $md2+px) {
+			height: 548.71px;
+		}
 	}
 
 	&__title {
-		font-size: 80/25 + px;
+		font-size: 80/25 + em;
 		font-weight: 900;
 		line-height: calc(100 / 80);
+		@media (min-width: $md1+px) {
+			margin-top: 88px;
+		}
+		@media (min-width: $md2+px) {
+			margin-top: 65px;
+		}
+		@media (max-width: $md2+px) {
+			font-size: 50px;
+			max-width: 472px;
+			margin-top: 130px;
+		}
 	}
 
 	&__text {
-		font-weight: 70;
+		display: flex;
+		flex-direction: column;
+		font-weight: 600;
+		line-height: calc(32.5 / 25);
+		@media (min-width: $md1+px) {
+			max-width: 658px;
+			margin-top: 66px;
+		}
+		@media (min-width: $md2+px) {
+			max-width: 466px;
+			margin-top: 40px;
+		}
 	}
 
 	&__button {
+		@media (min-width: $md1+px) {
+			margin-top: 90px;
+		}
+		@media (min-width: $md2+px) {
+			margin-top: 60px;
+		}
+	}
+
+	&__image {
+		position: absolute;
+		top: 0;
+		right: 0;
+		height: 100%;
+		width: 60%;
 	}
 
 	&__img {
+		position: absolute;
+		left: 0;
+		height: 100%;
+		box-shadow: 0;
 	}
 
 	& swiper-wrapper {
