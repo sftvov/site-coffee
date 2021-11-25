@@ -147,6 +147,7 @@
 		display: flex;
 		align-items: center;
 		& a {
+			transition: color 0.3s linear;
 			font-size: (34/25) + em;
 			line-height: 1;
 			@media (min-width: $md1+px) {

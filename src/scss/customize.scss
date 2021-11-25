@@ -56,21 +56,30 @@ body {
 // 	}
 
 ._button {
+	transition: background-color 0.3s ease-out;
 	font-size: 30/25 + em;
 	line-height: calc(36.27 / 30);
 	@media (min-width: $md1+px) {
-		height: 80px;
-		width: 400px;
+		min-width: 400px;
+		min-height: 80px;
 		border-radius: 5px;
 	}
 	@media (min-width: $md2+px) {
-		height: 56px;
-		width: 283px;
+		min-width: 283px;
+		min-height: 56px;
 		border-radius: 3.542541980743408px;
+	}
+	@media (min-width: $md3+px) {
+		font-size: 25px;
+		min-width: 100%;
+		min-height: 70px;
 	}
 	&--main {
 		color: $colorLight;
 		background-color: $colorMain;
+		&:hover {
+			background-color: $colorMainHover;
+		}
 	}
 }
 
@@ -83,26 +92,6 @@ body {
 // 		line-height: calc(24 / 12);
 // 		text-align: left;
 // 		display: flex;
-// 	}
-// }
-
-// ._button {
-// 	text-align: center;
-// 	font-size: 1.11em;
-// 	padding: 20px 51px;
-// 	border-radius: 8px;
-// 	cursor: pointer;
-// 	transition: background-color 0.3s ease, transform 0.3s ease;
-// 	&:active {
-// 		transform: translateY(2px);
-// 	}
-// }
-
-// ._button--main {
-// 	color: $colorLight;
-// 	background-color: $colorMain;
-// 	&:hover {
-// 		background-color: $colorMainHover;
 // 	}
 // }
 
