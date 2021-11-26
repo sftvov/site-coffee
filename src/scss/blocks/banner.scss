@@ -16,10 +16,10 @@
 		flex-direction: column;
 		align-items: flex-start;
 		@media (min-width: $md1+px) {
-			height: 772.87px;
+			min-height: 772.87px;
 		}
 		@media (min-width: $md2+px) {
-			height: 548.71px;
+			min-height: 548.71px;
 		}
 	}
 
@@ -80,6 +80,7 @@
 		@media (min-width: $md3+px) {
 			margin-top: 376px;
 		}
+		margin-top: 220px;
 	}
 
 	&__image {
@@ -88,6 +89,12 @@
 		right: 0;
 		height: 100%;
 		width: 60%;
+		@media (max-width: $md2+px) {
+			width: 79%;
+		}
+		@media (max-width: $md3+px) {
+			width: calc(290px + (100vw - 375px) / 2);
+		}
 	}
 
 	&__img {
@@ -95,6 +102,14 @@
 		left: 0;
 		@media (min-width: $md2+px) {
 			height: 100%;
+		}
+		@media (max-width: $md2+px) {
+			top: 238.57px;
+			height: 614.65px;
+		}
+		@media (max-width: $md3+px) {
+			top: 158px;
+			height: 360px;
 		}
 	}
 

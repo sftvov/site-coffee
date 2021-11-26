@@ -27,12 +27,22 @@ $md3: 739.95;
 	}
 	&__background {
 		position: absolute;
-		top: calc(-100vw / 1904 * 276);
-		right: -38.55%;
 		max-width: 1444px;
-		width: calc(100vw / 1904 * 1444);
 		@media (min-width: $maxWidth+px) {
 			top: -276px;
+		}
+		top: calc(-100vw / 1904 * 276);
+		right: -38.55%;
+		width: calc(100vw / 1904 * 1444);
+		@media (max-width: $md2+px) {
+			top: 40px;
+			width: 758px;
+			right: calc((100vw - 768px) / 2 - 440px);
+		}
+		@media (max-width: $md3+px) {
+			top: 20px;
+			width: 462px;
+			right: -330px;
 		}
 	}
 }
