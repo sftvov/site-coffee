@@ -4,10 +4,72 @@
 		margin-top: 32px;
 	}
 	@media (min-width: $md2+px) {
-		margin-top: 22.33px;
+		margin-top: 67px;
 	}
 	margin-top: 0;
 	&__swiper {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		& .swiper-wrapper {
+		}
+		& .swiper-slide {
+			overflow: hidden;
+			opacity: 0 !important;
+			&-active {
+				opacity: 1 !important;
+			}
+		}
+		& .pagination-container {
+			position: absolute;
+			@media (min-width: $md2+px) {
+				bottom: auto;
+			}
+			bottom: 0;
+			width: 100%;
+		}
+		& .swiper-pagination {
+			position: absolute;
+			@media (min-width: $md1+px) {
+				top: 38px;
+			}
+			@media (min-width: $md2+px) {
+				top: -26px;
+				right: 0;
+				bottom: auto;
+			}
+			@media (min-width: $md3+px) {
+				bottom: 215px;
+			}
+			bottom: 120px;
+			& .swiper-pagination-bullet {
+				@media (min-width: $md1+px) {
+					width: 20px;
+					height: 20px;
+					margin-right: 30px;
+				}
+				@media (min-width: $md2+px) {
+					width: 14px;
+					height: 14px;
+					margin-right: 20px;
+					background-color: $colorLight;
+				}
+				@media (min-width: $md3+px) {
+					width: 25px;
+					height: 25px;
+					margin-right: 30px;
+				}
+				margin-right: 13px;
+				&-active {
+					@media (min-width: $md2+px) {
+						background-color: $colorText;
+					}
+				}
+				&:last-child {
+					margin-right: 0;
+				}
+			}
+		}
 	}
 
 	&__container {
@@ -21,6 +83,10 @@
 		@media (min-width: $md2+px) {
 			min-height: 548.71px;
 		}
+		@media (min-width: $md3+px) {
+			min-height: 936px;
+		}
+		min-height: 542px;
 	}
 
 	&__title {
@@ -33,20 +99,21 @@
 		}
 		@media (min-width: $md2+px) {
 			font-size: 56px;
-			margin-top: 65px;
+			max-width: 1000px;
+			margin-top: 11px;
 		}
 		@media (min-width: $md3+px) {
 			font-size: 50px;
-			max-width: 472px;
 			margin-top: 130px;
 		}
 		font-size: 30px;
-		max-width: 283px;
+		@include adaptiv-value('max-width', 472, 570, 283, $md3, $minWidth, px);
 		margin-top: 60px;
 	}
 
 	&__text {
 		display: flex;
+		flex-grow: 1;
 		flex-direction: column;
 		font-weight: 600;
 		line-height: calc(32.5 / 25);
@@ -61,26 +128,15 @@
 			font-size: 18px;
 		}
 		@media (min-width: $md3+px) {
-			max-width: 314px;
 			margin-top: 80px;
 			font-size: 20px;
 		}
 		font-size: 14px;
-		max-width: 294px;
+		@include adaptiv-value('max-width', 314, 570, 229, $md3, $minWidth, px);
 		margin-top: 30px;
 	}
 
 	&__button {
-		@media (min-width: $md1+px) {
-			margin-top: 90px;
-		}
-		@media (min-width: $md2+px) {
-			margin-top: 60px;
-		}
-		@media (min-width: $md3+px) {
-			margin-top: 376px;
-		}
-		margin-top: 220px;
 	}
 
 	&__image {
@@ -93,7 +149,7 @@
 			width: 79%;
 		}
 		@media (max-width: $md3+px) {
-			width: calc(290px + (100vw - 375px) / 2);
+			width: 290px;
 		}
 	}
 
@@ -111,10 +167,5 @@
 			top: 158px;
 			height: 360px;
 		}
-	}
-
-	& swiper-wrapper {
-	}
-	& swiper-slide {
 	}
 }

@@ -36,7 +36,7 @@ function spaceForMobileMenu() {
 @@include('elements/search.js');
 // include('elements/tabs.js');
 // include('elements/popups.js');
-// include('elements/sliders.js');
+@@include('elements/sliders.js');
 // include('elements/gallery.js');
 // include('elements/scroll.js');
 // include('elements/spollers.js');

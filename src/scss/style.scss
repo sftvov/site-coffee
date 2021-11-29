@@ -27,23 +27,27 @@ $md3: 739.95;
 	}
 	&__background {
 		position: absolute;
-		max-width: 1444px;
 		@media (min-width: $maxWidth+px) {
-			top: -276px;
+			right: -734px;
 		}
-		top: calc(-100vw / 1904 * 276);
-		right: -38.55%;
-		width: calc(100vw / 1904 * 1444);
-		@media (max-width: $md2+px) {
+		@media (min-width: $md1+px) {
+			top: -278px;
+			right: calc((100vw - 1904px) / 2 - 734px);
+			width: 1444px;
+		}
+		@media (min-width: $md2+px) {
+			top: -278px;
+			right: calc((100vw - 1349px) / 2 - 517px);
+			width: 1020px;
+		}
+		@media (min-width: $md3+px) {
 			top: 40px;
-			width: 758px;
 			right: calc((100vw - 768px) / 2 - 440px);
+			width: 758px;
 		}
-		@media (max-width: $md3+px) {
-			top: 20px;
-			width: 462px;
-			right: -330px;
-		}
+		top: 20px;
+		right: -330px;
+		width: 462px;
 	}
 }
 
