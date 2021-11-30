@@ -63,12 +63,13 @@
 	}
 }
 .swiper-pagination-bullet {
+	transition: background-color 0.4s linear;
 	width: 13px;
 	height: 13px;
 	display: inline-block;
 	border-radius: 50%;
 	background: $colorTextLight;
-	// opacity: 0.2;
+	// opacity: 0.4;
 	@at-root button#{&} {
 		border: none;
 		margin: 0;
