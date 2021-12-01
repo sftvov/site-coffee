@@ -112,7 +112,11 @@
 
 	&__menu-item {
 		@media (max-width: $md2+px) {
+			font-size: 32/20 + em;
 			padding: 10px 0;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 16/14 + em;
 		}
 	}
 }
@@ -148,7 +152,7 @@
 		align-items: center;
 		& a {
 			transition: color 0.3s linear;
-			font-size: (34/25) + em;
+			font-size: 34/25 + em;
 			line-height: 1;
 			@media (min-width: $md1+px) {
 				margin-right: 53px;

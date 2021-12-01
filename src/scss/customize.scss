@@ -18,12 +18,37 @@ body {
 		font-size: 18px;
 	}
 	@media (min-width: $md3+px) {
-		font-size: 32px;
+		font-size: 20px;
 	}
-	font-size: 16px;
+	font-size: 14px;
+	line-height: 1.21;
 	font-weight: 500;
 	letter-spacing: 0em;
 	font-style: normal;
+}
+
+._button {
+	transition: background-color 0.3s ease-out;
+	border-radius: 5px;
+	font-size: 18/14 + em;
+	min-height: 50px;
+	@media (max-width: $md2+px) {
+		min-width: 100%;
+		padding: 14px 0;
+	}
+	&--main {
+		color: $colorLight;
+		background-color: $colorMain;
+		&:hover {
+			background-color: $colorMainHover;
+		}
+	}
+}
+
+._title {
+	font-size: 50/25 + em;
+	font-weight: 700;
+	line-height: (62.4/50);
 }
 
 ._bold {
@@ -54,58 +79,15 @@ body {
 // 		min-height: 120px;
 // 		padding: 9px 5px;
 // 	}
-
-._button {
-	transition: background-color 0.3s ease-out;
-	line-height: calc(36.27 / 30);
-	@media (min-width: $md1+px) {
-		min-width: 400px;
-		min-height: 80px;
-		border-radius: 5px;
-	}
-	@media (min-width: $md2+px) {
-		font-size: 30/25 + em;
-		min-width: 283px;
-		min-height: 56px;
-		border-radius: 3.542541980743408px;
-	}
-	@media (min-width: $md3+px) {
-		font-size: 25px;
-		min-height: 70px;
-	}
-	font-size: 30/25 + em;
-	min-width: 100%;
-	min-height: 50px;
-	&--main {
-		color: $colorLight;
-		background-color: $colorMain;
-		&:hover {
-			background-color: $colorMainHover;
-		}
-	}
-}
-
 // 	&__checkbox {
 // 		display: none;
 // 	}
-
 // 	&__label {
 // 		cursor: pointer;
 // 		line-height: calc(24 / 12);
 // 		text-align: left;
 // 		display: flex;
 // 	}
-// }
-
-// ._title {
-// 	text-transform: uppercase;
-// 	font-size: 2em;
-// 	font-weight: 700;
-// 	line-height: 43px;
-// 	text-align: center;
-// 	@include common-value('padding-top', 12);
-// 	@include common-value('padding-bottom', 12);
-// 	color: $colorTextGray;
 // }
 
 // ._underline {

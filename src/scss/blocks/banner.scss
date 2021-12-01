@@ -6,7 +6,6 @@
 	@media (min-width: $md2+px) {
 		margin-top: 22px;
 	}
-	margin-top: 0;
 	&__swiper {
 		position: relative;
 		display: flex;
@@ -90,23 +89,22 @@
 	}
 
 	&__title {
-		font-size: 80/25 + em;
 		font-weight: 900;
-		line-height: calc(100 / 80);
+		line-height: (100 / 80);
 		@media (min-width: $md1+px) {
-			font-size: 80px;
+			font-size: 80/25 + em;
 			margin-top: 88px;
 		}
 		@media (min-width: $md2+px) {
-			font-size: 56px;
+			font-size: 56/18 + em;
 			max-width: 1000px;
 			margin-top: 65px;
 		}
 		@media (min-width: $md3+px) {
-			font-size: 50px;
+			font-size: 50/20 + em;
 			margin-top: 130px;
 		}
-		font-size: 30px;
+		font-size: 30/14 + em;
 		@include adaptiv-value('max-width', 472, 570, 283, $md3, $minWidth, px);
 		margin-top: 60px;
 	}
@@ -118,20 +116,16 @@
 		font-weight: 600;
 		line-height: calc(32.5 / 25);
 		@media (min-width: $md1+px) {
-			font-size: 25px;
 			max-width: 658px;
 			margin-top: 66px;
 		}
 		@media (min-width: $md2+px) {
 			max-width: 466px;
 			margin-top: 40px;
-			font-size: 18px;
 		}
 		@media (min-width: $md3+px) {
 			margin-top: 80px;
-			font-size: 20px;
 		}
-		font-size: 14px;
 		@include adaptiv-value('max-width', 314, 570, 229, $md3, $minWidth, px);
 		margin-top: 30px;
 	}
@@ -147,6 +141,20 @@
 
 	&__button {
 		z-index: 1;
+		@media (min-width: $md1+px) {
+			font-size: 30/25 + em;
+			min-width: 400px;
+			min-height: 80px;
+		}
+		@media (min-width: $md2+px) {
+			font-size: 21/18 + em;
+			min-width: 283px;
+			min-height: 56px;
+		}
+		@media (min-width: $md3+px) {
+			font-size: 25/20 + em;
+			min-height: 70px;
+		}
 		margin-top: 20px;
 	}
 

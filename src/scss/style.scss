@@ -47,6 +47,7 @@ $md3: 739.95;
 		}
 		top: 16px;
 		right: -320px;
+		right: calc((100vw - 375px) / 2 - 320px);
 		width: 462px;
 	}
 }
@@ -73,9 +74,7 @@ $md3: 739.95;
 		max-width: $md3 - 39.95 + px;
 	}
 	@media (max-width: $md3+px) {
-		max-width: $md3 + 0.05 + px;
-		padding-left: 17.5px;
-		padding-right: 17.5px;
+		max-width: $minWidth - 35 + px;
 	}
 }
 
@@ -83,5 +82,6 @@ $md3: 739.95;
 @import 'header';
 
 @import 'blocks/banner.scss';
+@import 'blocks/category.scss';
 
 @import 'footer';
