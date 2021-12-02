@@ -14,7 +14,7 @@ let slider_about = new Swiper('.banner__swiper', {
 	spaceBetween: 0,
 	// autoHeight: true,
 	speed: 800,
-	touchRatio: 2,
+	touchRatio: 1,
 	//simulateTouch: false,
 	grabCursor: true,
 	//loop: true,
@@ -61,3 +61,23 @@ let slider_about = new Swiper('.banner__swiper', {
 	//	el: '.swiper-scrollbar',
 	//},
 });
+
+
+
+let slider_category = new Swiper('.categories__container', {	
+	observer: true,
+	observeParents: true,
+	slidesPerView: 1,
+	spaceBetween: 0,
+	speed: 800,
+	touchRatio: 3,
+	breakpoints: {
+		1220: {
+			slidesPerView: 4,
+			simulateTouch: false,
+		},
+	},
+});
+
+
+
