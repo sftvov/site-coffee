@@ -12,13 +12,20 @@
 		@media (max-width: $md2+px) {
 			max-width: 460px;
 		}
+		@media (max-width: $md3+px) {
+			max-width: 272px;
+		}
 	}
 
 	&__title {
 	}
 
 	&__body {
-		margin-top: 60px;
+		@media (min-width: $md3+px) {
+			margin-top: 60px;
+		}
+
+		margin-top: 30px;
 	}
 
 	&__category {
@@ -39,35 +46,53 @@
 		padding: 0 40px;
 		border-radius: 12px;
 	}
+	padding: 0 20px;
+	border-radius: 5px;
 	box-shadow: 0 0 30px #{$colorTextGray + '30'};
 	background-color: $colorLight;
 
 	&.swiper-slide:not(.swiper-slide-active) {
 		@media (max-width: $md2+px) {
-			transform: scaleX(0.74) scaleY(0.93);
+			transform: scale(0.93);
+			& .category__button {
+				opacity: 0;
+				visibility: hidden;
+			}
 		}
+	}
+
+	&__link {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
 	}
 
 	&__body {
 		display: grid;
 		@media (min-width: $md1+px) {
 			grid-template-rows: 1fr auto 145px;
-			height: 539px;
+			min-height: 539px;
 		}
 		@media (min-width: $md2+px) {
 			grid-template-rows: 1fr auto 104px;
-			height: 381px;
+			min-height: 381px;
 		}
 		@media (min-width: $md3+px) {
-			grid-template-rows: 1fr auto 104px;
-			height: 442px;
+			grid-template-rows: 1fr auto 148px;
+			min-height: 442px;
 		}
+		grid-template-rows: 1fr auto 115px;
+		min-height: 330px;
 	}
 
 	&__image {
 		align-self: center;
 		justify-self: center;
-		text-align: center;
+		display: flex;
+		align-items: center;
+		justify-content: center;
 		@media (min-width: $md1+px) {
 			width: 235px;
 			height: 295px;
@@ -78,17 +103,19 @@
 		}
 		@media (min-width: $md3+px) {
 			width: 340px;
-			height: 345px;
+			height: 244px;
+		}
+		width: 235px;
+		height: 168px;
+		& picture {
+			display: contents;
 		}
 	}
 
 	&__img {
-		position: relative;
-		top: 50%;
 		transition: transform 0.3s ease-in-out;
 		max-width: 100%;
 		max-height: 100%;
-		transform: translateY(-50%);
 	}
 
 	&__name {
@@ -104,8 +131,6 @@
 
 	&__button {
 		transition: opacity 0.3s linear;
-		opacity: 0;
-		visibility: hidden;
 		font-size: 1em;
 		width: 100%;
 		@media (min-width: $md1+px) {
@@ -113,9 +138,17 @@
 			padding: 15px;
 		}
 		@media (min-width: $md2+px) {
+			opacity: 0;
+			visibility: hidden;
 			margin-bottom: 46px;
 			padding: 10.5px;
 		}
+		@media (min-width: $md3+px) {
+			margin-bottom: 41px;
+			padding: 20px;
+		}
+		margin-bottom: 30px;
+		padding: 14px;
 	}
 	@media (hover: hover) and (min-width: $md2+px) {
 		&:hover {
@@ -134,19 +167,12 @@
 			}
 			& .category__img {
 				@media (min-width: $md1+px) {
-					transform: translateY(calc(-79px - 50%));
+					transform: translateY(-79px);
 				}
 				@media (min-width: $md2+px) {
-					transform: translateY(calc(-57px - 50%));
+					transform: translateY(-57px);
 				}
 			}
 		}
-	}
-	&__link {
-		position: absolute;
-		top: 0;
-		left: 0;
-		width: 100%;
-		height: 100%;
 	}
 }

@@ -68,7 +68,7 @@ let slider_category = new Swiper('.categories__container', {
 	observer: true,
 	observeParents: true,
 	slidesPerView: 1,
-	spaceBetween: -40,
+	spaceBetween: 4,
 	speed: 800,
 	touchRatio: 1,
 	loop: true,
