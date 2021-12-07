@@ -18,6 +18,9 @@
 	}
 
 	&__title {
+		@media (max-width: $md3+px) {
+			font-size: 20/14 + em;
+		}
 	}
 
 	&__body {
@@ -29,6 +32,19 @@
 	}
 
 	&__category {
+	}
+
+	& .swiper {
+		& .swiper-pagination {
+			@media (min-width: $md2+px) {
+				display: none;
+			}
+			@media (min-width: $md3+px) {
+				margin-top: 35px;
+			}
+			margin-top: 15px;
+			position: static;
+		}
 	}
 }
 .category {
@@ -123,6 +139,12 @@
 		position: relative;
 		font-weight: 700;
 		text-align: center;
+		@media (max-width: $md2+px) {
+			font-size: 22/20 + em;
+		}
+		@media (max-width: $md3+px) {
+			font-size: 18/14 + em;
+		}
 	}
 
 	&__btn {
@@ -131,7 +153,6 @@
 
 	&__button {
 		transition: opacity 0.3s linear;
-		font-size: 1em;
 		width: 100%;
 		@media (min-width: $md1+px) {
 			margin-bottom: 65px;
@@ -144,6 +165,7 @@
 			padding: 10.5px;
 		}
 		@media (min-width: $md3+px) {
+			font-size: 1em;
 			margin-bottom: 41px;
 			padding: 20px;
 		}

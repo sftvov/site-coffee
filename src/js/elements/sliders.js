@@ -72,6 +72,10 @@ let slider_category = new Swiper('.categories__container', {
 	speed: 800,
 	touchRatio: 1,
 	loop: true,
+	pagination: {
+		el: '.swiper-pagination',
+		clickable: true,
+	},
 	breakpoints: {
 		1220: {
 			slidesPerView: 4,
