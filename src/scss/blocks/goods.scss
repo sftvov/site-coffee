@@ -1,0 +1,88 @@
+.goods {
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__description {
+		@media (min-width: $md1+px) {
+			font-weight: 500;
+			line-height: 32px;
+			letter-spacing: 0em;
+			text-align: right;
+		}
+	}
+
+	&__body {
+	}
+
+	&__card {
+	}
+	&__all {
+	}
+}
+.goods-card {
+	&__select {
+	}
+
+	&__image {
+	}
+
+	&__img {
+	}
+
+	&__about {
+	}
+
+	&__rating {
+	}
+
+	&__stars {
+	}
+
+	&__caption {
+	}
+
+	&__grade {
+	}
+
+	&__count-of-reviews {
+	}
+
+	&__strength {
+	}
+
+	&__characters {
+	}
+
+	&__character {
+	}
+
+	&__name-of-character {
+	}
+
+	&__scale {
+	}
+
+	&__name {
+	}
+
+	&__description {
+	}
+
+	&__price {
+	}
+
+	&__old-price {
+	}
+
+	&__new-price {
+	}
+
+	&__button-box {
+	}
+
+	&__button {
+	}
+}
