@@ -30,7 +30,6 @@ body {
 ._button {
 	transition: background-color 0.3s ease-out;
 	border-radius: 5px;
-	font-size: 18/14 + em;
 	line-height: (22/18);
 	@media (max-width: $md2+px) {
 		min-width: 100%;
